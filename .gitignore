@@ -1,0 +1,37 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+.pnpm-debug.log*
+
+# Testing
+/coverage
+
+# Next.js build output
+/.next/
+/out/
+
+# Next.js specific files
+.DS_Store
+*.pem
+
+# Production
+/build
+
+# Misc
+.npm
+*.log*
+next-env.d.ts
+*.local
+.vercel
+*.tsbuildinfo
+
+# Environment Variables
+.env
+.env*.local
+!.env.example
+
+# PNPM Lockfile
+pnpm-lock.yaml

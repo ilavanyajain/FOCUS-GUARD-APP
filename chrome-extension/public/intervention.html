@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Guard - Take a Mindful Moment</title>
+  <link rel="stylesheet" href="intervention.css">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="icon-wrapper">
+        <svg class="shield-icon" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path>
+        </svg>
+      </div>
+      
+      <h1>Take a Mindful Moment</h1>
+      <p class="site-message">You were about to visit <span id="blocked-site"></span></p>
+      
+      <div id="initial-prompt" class="prompt-section">
+        <p>Before continuing, would you like to try a quick breathing exercise to refocus your attention?</p>
+        <div class="button-group">
+          <button id="start-breathing" class="primary-button">
+            Start Breathing Exercise
+            <span class="timer">(60s)</span>
+          </button>
+          <button id="skip-intervention" class="secondary-button">
+            Skip for now
+          </button>
+        </div>
+      </div>
+
+      <div id="breathing-exercise" class="breathing-section hidden">
+        <div class="breathing-circle">
+          <div class="inner-circle"></div>
+          <div class="breathing-text">Breathe In</div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+        <p class="instruction">Follow the circle as it expands and contracts</p>
+        <button id="end-early" class="secondary-button small">End Early</button>
+      </div>
+
+      <div id="completion-message" class="completion-section hidden">
+        <h2>Great Job! 🎉</h2>
+        <p>You've taken a moment to refocus. How do you feel?</p>
+        <div class="button-group">
+          <button id="continue-to-site" class="primary-button">Continue to Site</button>
+          <button id="stay-focused" class="secondary-button">Stay Focused</button>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat">
+          <span class="stat-value" id="today-interventions">0</span>
+          <span class="stat-label">Interventions Today</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="time-saved">0h</span>
+          <span class="stat-label">Time Saved</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../src/intervention.js"></script>
+</body>
+</html> 

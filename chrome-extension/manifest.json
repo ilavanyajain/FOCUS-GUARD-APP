@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Guard - Website Blocker",
+  "version": "1.0.0",
+  "description": "Block distracting websites with mindful interventions",
+  "permissions": [
+    "storage",
+    "tabs",
+    "declarativeNetRequest",
+    "notifications",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_popup": "public/popup.html",
+    "default_icon": {
+      "16": "public/icon-16.png",
+      "48": "public/icon-48.png",
+      "128": "public/icon-128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "css": ["public/intervention.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["public/intervention.html", "public/intervention.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "public/icon-16.png",
+    "48": "public/icon-48.png",
+    "128": "public/icon-128.png"
+  }
+} 
