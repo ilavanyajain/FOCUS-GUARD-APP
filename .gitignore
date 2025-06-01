@@ -34,4 +34,4 @@ next-env.d.ts
 !.env.example
 
 # PNPM Lockfile
-pnpm-lock.yaml
+# pnpm-lock.yaml
